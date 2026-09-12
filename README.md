@@ -4,7 +4,7 @@ A Progressive Web App (PWA) designed to open local HTML files directly in your w
 
 This tool is especially useful for mobile browsers or restricted operating system environments that do not natively support opening local HTML files.
 
-**Try the live PWA:** https://muhammedsaleem-brej.github.io/HTML-Blob-Viewer/
+**Try the live PWA:** https://muhammedsaleem-brej.github.io/Tillandsia-Runtime/
 
 The application reads the selected HTML file locally and runs it inside an embedded runtime frame using a Blob URL. Optional runtime controls allow the user to enable selected sandbox capabilities and browser permissions where the browser supports them.
 
