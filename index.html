@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tillandsia Runtime</title>
+    <meta name="description" content="A simple, open-source Progressive Web App (PWA) to open local HTML files in a sandboxed Web Runtime.">
+    <meta name="theme-color" content="#3b82f6">
+    
+    <!-- PWA Manifest & Stylesheet -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container" id="main-ui">
+        <!-- Application Header -->
+        <div class="header">
+            <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+            </div>
+            <h1>HTML Blob Viewer</h1>
+            <p class="subtitle">Select or drag & drop an HTML file to preview it in a configurable Web Runtime.</p>
+        </div>
+
+        <!-- Drag & Drop Zone -->
+        <div id="drop-zone" class="drop-zone">
+            <input type="file" id="file-input" accept=".html,.htm" class="file-input" title="Click to select an HTML file">
+            <svg xmlns="http://www.w3.org/2000/svg" class="drop-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            </svg>
+            <p class="drop-text">Click to browse or drag file here</p>
+            <p class="drop-hint">Supports .html and .htm files</p>
+        </div>
+
+        <!-- Basic Caching Option -->
+        <div class="options-container">
+            <input type="checkbox" id="cache-checkbox">
+            <label for="cache-checkbox">Cache file for bookmark or shortcut</label>
+        </div>
+
+        <details class="advanced-mode">
+            <summary>Advanced Mode (Web Runtime)</summary>
+            <div class="advanced-content">
+                <p class="advanced-hint">Configure sandbox parameters and hardware permissions for your local HTML file.</p>
+                
+                <div class="options-grid">
+                    <!-- Sandbox Permissions -->
+                    <div class="permission-group">
+                        <h4>Sandbox Settings</h4>
+                        <label><input type="checkbox" name="sb" value="allow-scripts" checked> allow-scripts</label>
+                        <label><input type="checkbox" name="sb" value="allow-forms"> allow-forms</label>
+                        <label><input type="checkbox" name="sb" value="allow-modals"> allow-modals</label>
+                        <label><input type="checkbox" name="sb" value="allow-popups"> allow-popups</label>
+                        <label><input type="checkbox" name="sb" value="allow-downloads"> allow-downloads</label>
+                        
+                        <!-- Same-Origin Control with Security Warning -->
+                        <div class="same-origin-container">
+                            <label class="danger-label">
+                                <input type="checkbox" id="allow-same-origin-cb" name="sb" value="allow-same-origin"> 
+                                allow-same-origin
+                            </label>
+                            <div id="origin-warning" class="security-warning hidden">
+                                ⚠️ <strong>Security Warning:</strong> Enabling this grants the HTML file access to your app's origin data storage. Only enable this for files you completely trust!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web API Permissions (Dependent on Same-Origin) -->
+                    <div class="permission-group" id="hardware-group">
+                        <h4>Powerful Web APIs</h4>
+                        <label><input type="checkbox" name="al" value="camera" disabled> Camera</label>
+                        <label><input type="checkbox" name="al" value="microphone" disabled> Microphone</label>
+                        <label><input type="checkbox" name="al" value="geolocation" disabled> Geolocation</label>
+                        <label><input type="checkbox" name="al" value="fullscreen" disabled> Fullscreen</label>
+                        <label><input type="checkbox" name="al" value="display-capture" disabled> Display Capture</label>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <div id="error-message" class="error-message hidden"></div>
+    </main>
+
+    <!-- Main JavaScript Logic -->
+    <script src="app.js" defer></script>
+</body>
+</html>
