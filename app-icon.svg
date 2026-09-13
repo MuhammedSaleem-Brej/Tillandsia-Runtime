@@ -1,31 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-    <!-- الخلفية السوداء (يمكنك إزالتها أو جعلها شفافة إذا كنت تريد الأيقونة مفرغة) -->
-    <rect width="100%" height="100%" fill="#000000"/>
-
-    <!-- أوراق نبتة التيلاندسيا (اللون الأخضر الفاتح) -->
-    <g fill="#8BEB9E">
-        <!-- الورقة المركزية -->
+    <!-- Tillandsia plant leaves (light green) -->
+    <g fill="#7FBF7F">
+        <!-- Central leaf -->
         <path d="M 252 295 Q 240 180 256 60 Q 272 180 260 295 Z" />
-        <!-- الأوراق اليسرى -->
+        <!-- Left leaves -->
         <path d="M 250 295 Q 210 180 170 90 Q 230 200 256 295 Z" />
         <path d="M 248 295 Q 170 200 110 160 Q 200 230 254 295 Z" />
         <path d="M 246 295 Q 130 240 80 240 Q 180 260 252 295 Z" />
         <path d="M 245 295 Q 120 280 80 310 Q 170 290 250 295 Z" />
-        <!-- الأوراق اليمنى -->
+        <!-- Right leaves -->
         <path d="M 262 295 Q 302 180 342 90 Q 282 200 256 295 Z" />
         <path d="M 264 295 Q 342 200 402 160 Q 312 230 258 295 Z" />
         <path d="M 266 295 Q 382 240 432 240 Q 332 260 260 295 Z" />
         <path d="M 267 295 Q 392 280 432 310 Q 342 290 262 295 Z" />
     </g>
 
-    <!-- أقواس الكود البرمجي (اللون البنفسجي الفاتح) -->
-    <g fill="none" stroke="#C0B4FF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
-        <!-- القوس الأيسر -->
+    <!-- Code brackets (light blue) -->
+    <g fill="none" stroke="#BFBFFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Left bracket -->
         <path d="M 215 285 L 140 345 L 215 405" />
-        <!-- القوس الأيمن -->
+        <!-- Right bracket -->
         <path d="M 297 285 L 372 345 L 297 405" />
     </g>
 
-    <!-- زر التشغيل Play (اللون البنفسجي الفاتح) -->
-    <path d="M 235 320 Q 230 317 230 323 L 230 377 Q 230 383 235 380 L 285 353 Q 290 350 285 347 Z" fill="#C0B4FF" />
+    <!-- Play button (light blue) -->
+    <path d="M 235 320 Q 230 317 230 323 L 230 377 Q 230 383 235 380 L 285 353 Q 290 350 285 347 Z" fill="#BFBFFF" />
 </svg>
